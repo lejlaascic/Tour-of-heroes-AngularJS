@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Akaya Telivigala", cursive;
+  font-family: "Architects Daughter", cursive;
+  font-family: "IBM Plex Serif", serif;
+  background-color: #ccc;
+}
+nav {
+  background-color: #ffb800;
+  padding: 12px;
+  overflow: hidden;
+}
+nav h3 {
+  float: left;
+  margin: 0 20px;
+  line-height: 35px;
+  color: #666;
+  font-size: 1.5em;
+  letter-spacing: 4px;
+}
+nav img {
+  float: left;
+  height: 40px;
+  margin-right: 10px;
+}
+nav input {
+  display: block;
+  float: right;
+  font-size: 1.2em;
+  background-color: #ffb800;
+  border-bottom: 2px solid #666;
+  outline: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  line-height: 35px;
+  color: #000;
+}
+main {
+  width: 60%;
+  float: left;
+  padding: 10px;
+  background-color: #ccc;
+}
+aside {
+  width: 40%;
+  float: right;
+  background-color: #ccc;
+}
+main ul {
+  list-style-type: none;
+}
+main ul li {
+  padding: 10px;
+  overflow: hidden;
+}
+main ul li:hover {
+  background-color: #aaa;
+}
+main ul li img,
+.headerImg {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+main ul li span,
+main ul li img,
+.headerImg,
+.card span {
+  float: left;
+  margin: 0 10px;
+}
+main ul li i {
+  float: right;
+  cursor: pointer;
+}
+main ul li i:hover {
+  color: #ea1023;
+}
+
+form {
+  padding: 10px;
+  margin-top: 100px;
+  height: 500px;
+}
+
+form input[type="text"] {
+  padding: 8px 12px;
+  width: 90%;
+  margin: 10px auto;
+  display: block;
+  border-radius: 20px;
+  outline: none;
+  font-size: 1.2em;
+}
+
+form button {
+  width: 90%;
+  padding: 12px;
+  border: none;
+  outline: none;
+  margin: 20px auto;
+  background-color: #ffb800;
+  color: #666;
+  display: block;
+  border-radius: 20px;
+  font-size: 1em;
+}
+form label {
+  display: block;
+  margin: 5px;
+  font-weight: 600;
+  margin-left: 60px;
+}
+form button:hover {
+  opacity: 0.6;
+}
+.card {
+  padding: 10px;
+  background-color: #ddd;
+  margin: 40px 10px;
+  box-shadow: 0px 0px 16px -1px rgba(0, 0, 0, 0.75);
+  border-radius: 12px;
+  position: relative;
+}
+.cardImage {
+  width: 100%;
+}
+.card p {
+  text-align: center;
+  font-weight: 600;
+}
+.cardImage {
+  margin-top: 20px;
+}
+footer {
+  padding: 10px;
+  background-color: #ffb800;
+  text-align: center;
+  font-size: 1em;
+  clear: both;
+}
+.nameHero {
+  font-weight: 600;
+}
+

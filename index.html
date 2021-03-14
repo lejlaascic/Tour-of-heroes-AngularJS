@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='myApp'>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Architects+Daughter&family=IBM+Plex+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+    <body ng-controller='myController'>
+        <nav>
+            <img src="img/Witcher.png" alt="logo">
+            <h3>Witcher Characters</h3>
+            <input type="text" placeholder="Search..." ng-model='myHeroes'>
+        </nav>
+        <main>
+            <ul>
+                <li ng-repeat="hero in heroes | filter: myHeroes " ng-click='showHeroInCard(hero)'>
+                    <img ng-src="{{hero.image}}" alt="{{hero.neme}}">
+                    <span class="nameHero">{{$index +1}}. {{hero.neme}}</span><br>
+                    <span>{{hero.description}}</span>
+                    <i class="fas fa-trash-alt" ng-click="delateHero($index)"></i>
+                </li>
+            </ul>
+            
+            <form ng-submit=addHero()>
+                <label>Name of character: </label>
+                <input type="text" placeholder="Name of character" ng-model='newhero.neme'>
+                <label>Description of character: </label>
+                <input type="text" placeholder="Description of character" ng-model='newhero.description'>
+                <label >Image of character: </label>
+                <input type="text" placeholder="Image of character" ng-model='newhero.image'>
+                <button type="submit"><i class="fas fa-plus"></i> Add New Hero</button>
+            </form>
+        </main>
+        <aside>
+           <div class="card" ng-show='showCard' ng-click='showHeroInCard'>
+                <img class="headerImg" ng-src="{{clickedHero.image}}" >
+                <span>{{$index}} {{clickedHero.neme}}</span><br>
+                <span>{{clickedHero.description}}</span>
+                <img class="cardImage" ng-src="{{clickedHero.image}}">
+                <p>{{clickedHero.description}}</p>
+            </div>
+        </aside>
+        <footer>&copy;Witcher</footer>
+    <script src="script.js"></script>
+</body>
+</html>
